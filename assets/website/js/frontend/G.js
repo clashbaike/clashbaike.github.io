@@ -118,7 +118,8 @@
 	            	{
 	            		url: location.href,
 	            		to_url: new_url,
-	            		code: type
+	            		code: type,
+	            		ad_code: type
 	            	}
 	            );
 
@@ -146,6 +147,7 @@
     	},
         //初始化操作
         init: function (page_code) {
+        	G.Fun.BindTo();
 			switch(page_code)
 			{
 				case 'index':
@@ -174,7 +176,6 @@
 					break;
 
 				case 'newly_discovered_nodes':
-					G.Fun.BindTo();
 					G.Fun.BindDetailWebsite();
 					
 					var date = G.Fun.getUrlParam('date');
@@ -203,7 +204,6 @@
 					break;
 
 				case 'detail':
-					G.Fun.BindTo();
 					G.Fun.BindDetailWebsite();
 					break;
 			}
